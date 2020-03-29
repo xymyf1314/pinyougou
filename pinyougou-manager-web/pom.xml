@@ -12,6 +12,18 @@
 
     <artifactId>pinyougou-manager-web</artifactId>
     <dependencies>
+        <!-- 实体层依赖  -->
+        <dependency>
+            <groupId>com.pinyougou</groupId>
+            <artifactId>pinyougou-pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--服务层接口依赖-->
+        <dependency>
+            <groupId>com.pinyougou</groupId>
+            <artifactId>pinyougou-sellergoods-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
