@@ -20,7 +20,7 @@ public interface BrandService {
      *
      * @return 所有品牌信息
      */
-    public List<TbBrand> findAll();
+    List<TbBrand> findAll();
 
     /**
      * 品牌分页
@@ -29,7 +29,7 @@ public interface BrandService {
      * @param pageSize 页大小
      * @return 分页实体
      */
-    public PageResult findPage(int pageNum, int pageSize);
+    PageResult findPage(int pageNum, int pageSize);
 
     /**
      * 增加品牌
@@ -37,5 +37,37 @@ public interface BrandService {
      * @param brand 品牌
      * @return Result 结果集
      */
-    public Result add(TbBrand brand);
+    Result add(TbBrand brand);
+
+    /**
+     * 根据id查询实体
+     *
+     * @param id id
+     * @return TbBrand
+     */
+    TbBrand findOne(Long id);
+
+    /**
+     * 修改
+     *
+     * @param brand 修改后的品牌
+     */
+    Result update(TbBrand brand);
+
+    /**
+     * 删除
+     *
+     * @param ids 待删除的id数组
+     */
+    Result delete(Long[] ids);
+
+    /**
+     * 品牌的条件查询
+     *
+     * @param brand
+     * @param pageNum  页码
+     * @param pageSize 页大小
+     * @return 分页实体
+     */
+    PageResult findPage(TbBrand brand, int pageNum, int pageSize);
 }

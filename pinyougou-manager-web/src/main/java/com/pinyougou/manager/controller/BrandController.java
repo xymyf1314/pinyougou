@@ -38,4 +38,25 @@ public class BrandController {
     public Result add(@RequestBody TbBrand brand) {
         return brandService.add(brand);
     }
+
+    @RequestMapping("findOne")
+    public TbBrand findOne(Long id) {
+        return brandService.findOne(id);
+    }
+
+    @RequestMapping("/update")
+    public Result update(@RequestBody TbBrand brand) {
+        return brandService.update(brand);
+    }
+
+    @RequestMapping("/delete")
+    public Result update(Long[] ids) {
+        return brandService.delete(ids);
+    }
+
+    @RequestMapping("/search")
+    public PageResult search(@RequestBody TbBrand brand, int page, int size) {
+        return brandService.findPage(brand, page, size);
+    }
+
 }
