@@ -12,6 +12,7 @@ import entity.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Fan
@@ -144,6 +145,11 @@ public class BrandServiceImpl implements BrandService {
         }
         Page<TbBrand> page = (Page) (tbBrandMapper.selectByExample(example));
         return new PageResult(page.getTotal(), page.getResult());
+    }
+
+    @Override
+    public List<Map> selectOptionList() {
+        return tbBrandMapper.selectOptionList();
     }
 
 }
