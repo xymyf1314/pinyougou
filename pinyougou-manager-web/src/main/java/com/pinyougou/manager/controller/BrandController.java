@@ -59,8 +59,9 @@ public class BrandController {
     public PageResult search(@RequestBody TbBrand brand, int page, int size) {
         return brandService.findPage(brand, page, size);
     }
+
     @RequestMapping("/selectOptionList")
-    public List<Map> selectOptionList(){
+    public List<Map> selectOptionList() {
         return brandService.selectOptionList();
     }
 

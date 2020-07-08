@@ -123,6 +123,7 @@ public class SpecificationController {
 
     /**
      * 查询规格信息
+     *
      * @return 规格信息
      */
     @RequestMapping("/selectOptionList")

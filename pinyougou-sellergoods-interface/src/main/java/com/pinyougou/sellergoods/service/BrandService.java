@@ -73,7 +73,8 @@ public interface BrandService {
     PageResult findPage(TbBrand brand, int pageNum, int pageSize);
 
     /**
-     *  品牌下拉框数据
+     * 品牌下拉框数据
+     *
      * @return 品牌数据
      */
     List<Map> selectOptionList();
